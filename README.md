@@ -73,17 +73,18 @@ Output table:
 Oh yes, about the `showTable()` function. How does it even work? Let's go back to the very beginning
 
 ## Function `showTable()`
-What does the ***start=None*** variable do inside a function? Before displaying the table, we first write what is written inside the ***start*** variable, and then we display the table.
+What does the `start=None` variable do inside a function? Before displaying the table, we first write what is written inside the `start` variable, and then we display the table.
 ``` python
 def showTable(table, start=None):
     if start != None:
         print(start)
+    ...
 ```
-If nothing is written to the ***start*** variable, then we skip this check <br>
+If nothing is written to the `start` variable, then we skip this check <br>
 
-How do we display the table on the screen? We go through x and y on the table which is specified in the ***table*** variable and print it to the screen.
+How do we display the table on the screen? We go through x and y on the table which is specified in the `table` variable and print it to the screen.
 ``` python
-for y in range(len(table)):
+    for y in range(len(table)):
         for x in range(len(table[0])):
             print(f"{table[y][x]}", end=' ')
         print() # After completing the first cycle, we go to the next cycle y
